@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/script.js"></script>
+    <title>Frontend Bootcamp || 2024</title>
+  </head>
+  <body style="font-family: 'Poppins', sans-serif">
+    <!-- Theme Toggle Button -->
+    <div
+      class="dropdown dropup toggle-theme position-fixed bottom-0 end-0 me-3 mb-3 z-3"
+    >
+      <button
+        type="button"
+        class="btn btn-success py-2 d-flex align-items-center dropdown-toggle"
+        data-bs-toggle="dropdown"
+      >
+        <i class="bi bi-moon-stars-fill me-2"></i>
+      </button>
+
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li>
+          <a href="#" class="dropdown-item d-flex" id="light-theme-button">
+            <i class="me-2 bi bi-brightness-alt-high" id="text-light-icon"></i>
+            <span class="small" id="text-light">Light</span>
+            <i class="bi bi-check ms-auto" id="text-light-checked"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="dropdown-item d-flex" id="dark-theme-button">
+            <i
+              class="me-2 bi bi-brightness-alt-high-fill opacity-50"
+              id="text-dark-icon"
+            ></i>
+            <span class="small opacity-50" id="text-dark">Dark</span>
+            <i class="bi bi-check ms-auto d-none" id="text-dark-checked"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav
+      class="navbar navbar-expand-lg bg-dark navbar-dark py-2 sticky-top"
+      id="navbar"
+      style="transition: box-shadow 0.5s"
+    >
+      <div class="container-md">
+        <a href="#" class="navbar-brand">
+          <img
+            src="./images/website-logo.png "
+            alt="Logo indicating front-end development bootcamp"
+            class="img-fluid"
+            style="height: 60px; aspect-ratio: 1"
+          />
+        </a>
+
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="main-nav">
+          <ul class="navbar-nav ms-auto gap-4 fs-6 align-items-center">
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link active border-bottom border-3 border-light"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#html-css-section" class="nav-link">HTML / CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="#js-section" class="nav-link">JavaScript</a>
+            </li>
+            <li class="nav-item">
+              <a href="#courses" class="nav-link">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a href="#faqs" class="nav-link text-uppercase">faq</a>
+            </li>
+            <li class="nav-item pb-4 pb-lg-0">
+              <a
+                href="#"
+                class="rounded btn btn-primary btn-lg py-2 px-4 fs-6"
+                data-bs-toggle="modal"
+                data-bs-target="#modal"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <header class="bg-dark py-4 pb-lg-5">
+        <div class="container p-lg-5 text-center text-lg-start">
+          <div class="row text-light g-5 align-items-center">
+            <div class="col-lg-6">
+              <h1 class="display-6 fw-bold lh-base mb-4 fs-1">
+                Learn The Leading
+                <span class="text-warning">Front End Technologies</span>
+                of the Web ||
+                <abbr
+                  title="HyperText Markup Language"
+                  class="text-decoration-none"
+                  >HTML</abbr
+                >,
+                <abbr
+                  title="Cascading Style Sheets"
+                  class="text-decoration-none"
+                  >CSS</abbr
+                >
+                and
+                <abbr title="JavaScript" class="text-decoration-none">JS</abbr>
+              </h1>
+              <p class="lead fs-4 lh-base mb-4">
+                HTML structures content, CSS beautifies it, and JavaScript adds
+                interactivity, creating a vibrant web experience.
+              </p>
+              <div class="btn-group">
+                <a
+                  href="#"
+                  class="btn btn-primary py-3 px-4 fs-5"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal"
+                  >Get Started</a
+                >
+                <a href="#" class="btn btn-light py-3 px-4 fs-5">Learn More</a>
+              </div>
+            </div>
+            <div class="col-lg-6 position-relative mb-4 mb-lg-0">
+              <img
+                src="images/front-end-technologies.svg"
+                alt="an image depicting the three core technologies of the web - HTML, CSS and JavaScript"
+                class="img-fluid d-lg-block"
+              />
+
+              <!-- Decorative dots -->
+              <div
+                class="position-absolute bg-primary rounded-circle m-5 d-none d-lg-block"
+                style="height: 1rem; width: 1rem; top: 2%; left: 5%"
+              ></div>
+              <div
+                class="position-absolute bg-warning rounded-circle m-5 d-none d-lg-block"
+                style="height: 1rem; width: 1rem; top: -3%; left: 35%"
+              ></div>
+              <div
+                class="position-absolute bg-danger rounded-circle m-5 d-none d-lg-block"
+                style="height: 1rem; width: 1rem; top: -10%; left: 80%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modal" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title ms-4">
+                  Get your first course for free!
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form
+                  action="#"
+                  method="post"
+                  class="d-flex flex-column gap-2 p-4"
+                >
+                  <div class="form-floating">
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder=""
+                      required
+                    />
+                    <label for="name" class="form-label">Name</label>
+                  </div>
+
+                  <div class="form-floating">
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="surname"
+                      name="surname"
+                      placeholder=""
+                      required
+                    />
+                    <label for="surname" class="form-label">Surname</label>
+                  </div>
+
+                  <div class="form-floating">
+                    <input
+                      class="form-control"
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder=""
+                      required
+                    />
+                    <label for="email" class="form-label">Email</label>
+                  </div>
+
+                  <div class="form-floating">
+                    <input
+                      class="form-control"
+                      type="password"
+                      id="password"
+                      name="password"
+                      placeholder=""
+                      minlength="6"
+                      maxlength="15"
+                      required
+                    />
+                    <label for="password" class="form-label">Password</label>
+                    <p class="form-text">
+                      Your password must be between 6 and 15 characters.
+                    </p>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    Submit
+                  </button>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!--  Featured-in Section -->
+      <section class="p-3 pt-5 p-lg-5 text-center">
+        <div class="container">
+          <h2 class="fs-5 opacity-50 fw-bold p-0 mb-2 mb-lg-0">
+            As featured in
+          </h2>
+          <div class="row gx-3">
+            <figure
+              class="col-4 col-lg p-0 p-lg-1 d-flex justify-content-center align-items-center m-0"
+            >
+              <img
+                src="./images/brands/Sass_Logo.svg"
+                alt="Logo of Sass"
+                class="img-fluid c-featured"
+                style="width: 5rem; filter: brightness(0) opacity(0.4)"
+              />
+            </figure>
+            <figure
+              class="col-4 col-lg p-0 p-lg-1 d-flex justify-content-center align-items-center m-0"
+            >
+              <img
+                src="./images/brands/microsoft-logo.svg"
+                alt="Logo of Microsoft"
+                class="img-fluid c-featured"
+                style="width: 9rem; filter: brightness(0) opacity(0.4)"
+              />
+            </figure>
+            <figure
+              class="col-4 col-lg p-0 p-lg-1 d-flex justify-content-center align-items-center m-0"
+            >
+              <img
+                src="./images/brands/bootstrap.svg"
+                alt="Logo of Bootstrap"
+                class="img-fluid mb-lg-0 c-featured"
+                style="width: 4rem; filter: brightness(0) opacity(0.4)"
+              />
+            </figure>
+            <figure
+              class="col-4 col-lg p-0 p-lg-1 d-flex justify-content-center align-items-center m-0"
+            >
+              <img
+                src="./images/brands/google-logo.svg"
+                alt="Logo of Google"
+                class="img-fluid c-featured"
+                style="width: 4rem; filter: brightness(0) opacity(0.4)"
+              />
+            </figure>
+            <figure
+              class="col-4 col-lg p-0 p-lg-1 d-flex justify-content-center align-items-center m-0"
+            >
+              <img
+                src="./images/brands/codecademy.svg"
+                alt="Logo of Code Academy"
+                class="img-fluid c-featured"
+                style="width: 9rem; filter: brightness(0) opacity(0.4)"
+              />
+            </figure>
+
+            <figure
+              class="col-4 col-lg p-0 p-lg-1 d-flex justify-content-center align-items-center m-0"
+            >
+              <img
+                src="./images/brands/adobe-logo-Xd.svg"
+                alt="Logo of AdobeXd"
+                class="img-fluid mb-lg-0"
+                style="width: 4rem; filter: grayscale(100%) opacity(0.4)"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Steps Section -->
+      <section>
+        <!-- HTML Step 1 -->
+        <div class="p-5 bg-warning-subtle">
+          <div class="container mb-5">
+            <span
+              class="text-uppercase text-danger fw-bold"
+              style="letter-spacing: 0.75px"
+              >Frontend Bootcamp</span
+            >
+            <h2 class="display-5 fw-bold">
+              Frontend Bootcamp brings you the latest courses with emphasis on
+              practical learning
+            </h2>
+          </div>
+
+          <div class="container">
+            <div class="row g-5 align-items-center">
+              <div class="col-md-6">
+                <span class="d-block display-1 fw-bolder lh-sm opacity-25 mb-2"
+                  >01</span
+                >
+                <h3 class="h2 fw-bold">
+                  Sign Up to Get Access to Exclusive Courses
+                </h3>
+                <p class="fs-5 lh-base">
+                  Aside from accessing the general content, users will gain
+                  access to premium courses on multifarious topics as well as
+                  daily projects and newsletter.
+                </p>
+                <a href="#" class="btn btn-outline-primary py-3"
+                  >Get Exclusive Access</a
+                >
+              </div>
+              <div class="col-md-6">
+                <img src="./images/mobile-app.svg" alt="" class="img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HTML Step 2 -->
+        <div class="p-5 bg-dark-subtle" id="html-css-section">
+          <div class="container-lg">
+            <div class="row g-5 align-items-center">
+              <div class="col-md-6 order-2 order-md-1">
+                <img src="./images/html-css.svg" alt="" class="img-fluid" />
+              </div>
+              <div class="col-md-6 ps-0 ps-md-3 order-1 order-md-2">
+                <span
+                  class="d-block display-1 fw-bolder lh-sm opacity-25 mb-2 ps-4 ps-md-5"
+                  >02</span
+                >
+                <h3 class="h2 fw-bold ps-4 ps-md-5">
+                  The Dual Building Blocks of the Web: HTML and CSS
+                </h3>
+                <p class="fs-5 lh-base ps-4 ps-md-5">
+                  In this beginner-friendly module users will be introduced to
+                  the fundamental technologies that power the modern web —HTML
+                  and CSS. The module covers the structure of web content with
+                  HTML, the styling and layout techniques with CSS.
+                </p>
+                <div class="ps-4 ps-md-5">
+                  <a href="#" class="btn btn-outline-primary py-3"
+                    >Start the Journey</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HTML Step 3 -->
+        <div class="p-5 bg-success-subtle" id="js-section">
+          <div class="container-lg">
+            <div class="row g-5 align-items-center">
+              <div class="col-md-6 ps-0 ps-md-3">
+                <span
+                  class="d-block display-1 fw-bolder lh-sm opacity-25 mb-2 ps-4 ps-md-5"
+                  >03</span
+                >
+                <h3 class="h2 fw-bold ps-4 ps-md-5">
+                  Interactivity and Dynamic: JavaScript
+                </h3>
+                <p class="fs-5 lh-base ps-4 ps-md-5">
+                  JavaScript is the programming language, primarily used to add
+                  interactivity and functionality to web pages. It is a core
+                  technology of the web, alongside HTML and CSS, and enables
+                  websites to respond to user actions in real time.
+                </p>
+                <div class="ps-4 ps-md-5">
+                  <a href="#" class="btn btn-outline-primary py-3"
+                    >Learn The Basics</a
+                  >
+                </div>
+              </div>
+              <div class="col-md-6">
+                <img src="./images/react.svg" alt="" class="img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="bg-dark pb-3">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div
+              class="carousel-item c-item active"
+              data-bs-interval="5000"
+              style="height: 500px"
+            >
+              <div class="carousel-caption">
+                <figure class="figure">
+                  <img
+                    src="./images/avatars/male-avatar.svg"
+                    alt="a male avatar"
+                    class="img-fluid figure-img mb-4 mb-md-3"
+                    style="width: 12rem"
+                  />
+                  <blockquote class="blockquote fst-italic">
+                    <div class="mb-5 text-white">
+                      <p>
+                        The HTML and CSS module offers a comprehensive
+                        introduction to web design.
+                        <span class="d-none d-md-block"
+                          >With clear explanations, hands-on projects, and
+                          practical exercises, it empowers students to master
+                          the essentials of web development. Whether you're just
+                          starting out or looking to refine your skills, this
+                          course provides everything you need to build stunning,
+                          responsive websites with confidence!</span
+                        >
+                      </p>
+                    </div>
+                    <footer
+                      class="blockquote-footer text-white text-opacity-75"
+                    >
+                      Chuck John Doe
+                    </footer>
+                  </blockquote>
+                </figure>
+              </div>
+            </div>
+
+            <div
+              class="carousel-item c-item"
+              data-bs-interval="5000"
+              style="height: 500px"
+            >
+              <div class="carousel-caption">
+                <figure class="figure">
+                  <img
+                    src="./images/avatars/female-avatar-2.svg"
+                    alt="a male avatar"
+                    class="img-fluid figure-img mb-4 mb-md-3"
+                    style="width: 12rem"
+                  />
+                  <blockquote class="blockquote fst-italic">
+                    <div class="mb-5 text-white">
+                      <p>
+                        This HTML and CSS course is a game-changer for anyone
+                        interested in web development.
+                        <span class="d-none d-md-block"
+                          >It’s thoughtfully structured, making complex concepts
+                          easy to grasp, and the practical approach ensures you
+                          gain real-world skills. With step-by-step guidance,
+                          you'll quickly learn to create beautiful, responsive
+                          websites—making this course an invaluable resource for
+                          beginners and aspiring developers alike!</span
+                        >
+                      </p>
+                    </div>
+                    <footer
+                      class="blockquote-footer text-white text-opacity-75"
+                    >
+                      Mary Elizabeth Doe
+                    </footer>
+                  </blockquote>
+                </figure>
+              </div>
+            </div>
+
+            <div
+              class="carousel-item c-item"
+              data-bs-interval="5000"
+              style="height: 500px"
+            >
+              <div class="carousel-caption">
+                <figure class="figure">
+                  <img
+                    src="./images/avatars/male-avatar-2.svg"
+                    alt="a male avatar"
+                    class="img-fluid figure-img mb-4 mb-md-3"
+                    style="width: 12rem"
+                  />
+                  <blockquote class="blockquote fst-italic">
+                    <div class="mb-5 text-white">
+                      <p>
+                        The HTML and CSS course offers a great introduction to
+                        web development, featuring clear lessons and interactive
+                        exercises.
+                        <span class="d-none d-md-block">
+                          It’s ideal for beginners and those looking to improve
+                          their skills, providing everything needed to create
+                          professional, responsive websites with ease.
+                        </span>
+                      </p>
+                    </div>
+                    <footer
+                      class="blockquote-footer text-white text-opacity-75"
+                    >
+                      Adam Sandler
+                    </footer>
+                  </blockquote>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Courses -->
+      <section class="my-5 pt-5">
+        <div class="container mb-3" id="courses">
+          <span
+            class="text-uppercase text-danger fw-bold ms-3"
+            style="letter-spacing: 0.75px"
+            >Courses</span
+          >
+          <h2 class="display-5 fw-bold ms-3">
+            We offer a wide variety of courses
+          </h2>
+        </div>
+
+        <div class="container p-3">
+          <div
+            class="cards d-flex flex-column flex-xl-row justify-content-center align-items-center gap-5"
+          >
+            <div class="card" style="width: 24rem">
+              <img
+                src="https://www.omni-academy.com/wp-content/uploads/2021/11/The-Complete-Front-End-Web-Development-Course-Training-Course-Thumbnil-omni-jpg.jpg"
+                alt="HTML, CSS and JavaScript"
+                class="card-img-top img-fluid"
+                style="height: 300px"
+              />
+              <div class="card-body">
+                <h3 class="card-title">
+                  The Complete Front-End Web Development Course
+                </h3>
+                <p class="card-text">
+                  This comprehensive course is designed to take you from
+                  beginner to proficient web developer by covering the three
+                  foundational technologies that power the web: HTML, CSS, and
+                  JavaScript. Whether you want to build simple static websites
+                  or interactive web applications, this course will give you the
+                  skills to bring your ideas to life.
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  Module 1: Introduction to HTML (Hypertext Markup Language)
+                </li>
+                <li class="list-group-item">
+                  Module 2: Introduction to CSS (Cascading Style Sheets)
+                </li>
+                <li class="list-group-item">
+                  Module 3: Introduction to JavaScript (Client-Side Scripting)
+                </li>
+                <li class="list-group-item">
+                  Module 4: Putting It All Together - A Complete Web Project
+                </li>
+              </ul>
+            </div>
+
+            <div class="card d-flex" style="width: 24rem">
+              <img
+                src="/images/react.svg"
+                alt="JavaScript"
+                class="card-img-top img-x"
+                style="height: 300px"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Mastering JavaScript & TypeScript</h3>
+                <p class="card-text">
+                  This course is designed for developers who want to gain a
+                  solid understanding of both JavaScript and TypeScript. Whether
+                  you’re new to programming or looking to enhance your skills,
+                  we’ll guide you through the foundational concepts, practical
+                  applications, and advanced features of these languages. You'll
+                  learn how to build robust, scalable applications using
+                  JavaScript and TypeScript, and how to leverage TypeScript's
+                  powerful type system to write cleaner, more maintainable code.
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Lesson 1.1: What is JavaScript?</li>
+                <li class="list-group-item">
+                  Lesson 1.2: JavaScript Syntax Basics
+                </li>
+                <li class="list-group-item">
+                  Lesson 1.3: Functions, Loops and Flows in JavaScript
+                </li>
+                <li class="list-group-item">
+                  Lesson 1.4: Objects and Arrays as well as ES+6 Features
+                </li>
+              </ul>
+            </div>
+
+            <div class="card" style="width: 24rem">
+              <img
+                src="/images/js-frameworks.svg"
+                alt="JavaScript Frameworks"
+                class="card-img-top img-fluid"
+                style="height: 300px"
+              />
+              <div class="card-body">
+                <h3 class="card-title">
+                  Mastering JavaScript Frameworks: From Fundamentals to Advanced
+                </h3>
+                <p class="card-text">
+                  In today's web development ecosystem, JavaScript frameworks
+                  are essential tools for building modern, dynamic, and scalable
+                  applications. This course is designed for developers who want
+                  to dive deep into the world of JavaScript frameworks, covering
+                  the most popular ones—React, Vue.js, and Angular.
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Module 1: Introduction to React</li>
+                <li class="list-group-item">
+                  Module 2: Introduction to Vue.js
+                </li>
+                <li class="list-group-item">
+                  Module 3: Introduction to Angular
+                </li>
+                <li class="list-group-item">
+                  Module 4: jQuery (A Popular JavaScript Library)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs Section -->
+      <section>
+        <div class="container py-5" id="faqs">
+          <h2 class="text-center fw-light">
+            Frequently Asked Questions (FAQs)
+          </h2>
+          <div class="accordion mt-4 mb-5 mx-auto w-100" id="main-accordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#acc1"
+                >
+                  What is HTML and why is it important?
+                </button>
+              </h2>
+
+              <div
+                class="accordion-collapse collapse"
+                id="acc1"
+                data-bs-parent="#main-accordion"
+              >
+                <div class="accordion-body">
+                  <p>
+                    HTML (HyperText Markup Language) is the standard language
+                    used to create and structure content on the web. It defines
+                    elements like headings, paragraphs, links, images, and more.
+                    HTML is essential because it provides the backbone of web
+                    pages, helping browsers interpret and display content in a
+                    structured way. Every web page you visit is built with HTML
+                    at its core.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#acc2"
+                >
+                  What is CSS and how does it work with HTML?
+                </button>
+              </h2>
+
+              <div
+                class="accordion-collapse collapse"
+                id="acc2"
+                data-bs-parent="#main-accordion"
+              >
+                <div class="accordion-body">
+                  <p>
+                    CSS (Cascading Style Sheets) is a language used to style the
+                    layout and appearance of web pages. It controls the colors,
+                    fonts, spacing, positioning, and overall design. CSS works
+                    alongside HTML to enhance the visual presentation of the
+                    content defined by HTML. While HTML structures the content,
+                    CSS ensures it looks aesthetically pleasing.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#acc3"
+                >
+                  Do I need to learn HTML before CSS and JavaScript?
+                </button>
+              </h2>
+
+              <div
+                class="accordion-collapse collapse"
+                id="acc3"
+                data-bs-parent="#main-accordion"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Yes, it’s highly recommended to start with HTML because it
+                    forms the foundation of web development. Once you understand
+                    HTML, learning CSS and JavaScript will be much easier. HTML
+                    provides the basic structure of the page, and CSS and
+                    JavaScript will build upon that structure to make the page
+                    visually appealing and interactive.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#acc4"
+                >
+                  Can I build a website using just HTML and CSS?
+                </button>
+              </h2>
+
+              <div
+                class="accordion-collapse collapse show"
+                id="acc4"
+                data-bs-parent="#main-accordion"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Yes, you can build a static website with just HTML and CSS.
+                    HTML will provide the structure, while CSS will handle the
+                    design and layout. However, to create more dynamic and
+                    interactive web pages, such as forms with validation,
+                    real-time updates, or animations, you will need to learn
+                    JavaScript or other programming languages.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#acc5"
+                >
+                  How long does it take to learn HTML, CSS, and JavaScript?
+                </button>
+              </h2>
+
+              <div
+                class="accordion-collapse collapse"
+                id="acc5"
+                data-bs-parent="#main-accordion"
+              >
+                <div class="accordion-body">
+                  <div>
+                    The time it takes to learn these technologies depends on
+                    your prior experience, the time you dedicate to studying,
+                    and the depth of knowledge you aim to achieve. On average:
+
+                    <ul>
+                      <li>HTML & CSS: 1-2 months for basic proficiency.</li>
+                      <li>
+                        JavaScript: 3-6 months for a solid understanding of
+                        basic concepts and simple interactive features. If you
+                        dedicate several hours a week to learning and
+                        practicing, you could build a basic website in a few
+                        weeks and progress to more advanced web applications
+                        over time.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-top text-center">
+      <div class="container py-5 my-5">
+        <div class="row">
+          <div class="logo-col col-md-4">
+            <p class="mb-2 lead fw-bold">Frontend Bootcamp</p>
+            <small class="mb-4 d-block"
+              >Copyright © <span class="date">2024</span> by Omnifood, Inc. All
+              rights reserved.
+            </small>
+            <a href="#" class="d-block">
+              <img
+                src="./images/website-logo.png "
+                alt="Logo indicating front-end development bootcamp"
+                class="img-fluid"
+                style="height: 60px; aspect-ratio: 1"
+              />
+            </a>
+          </div>
+          <div class="address-col col-md-4">
+            <h4>Contact</h4>
+            <address>
+              <p>623 Harrison St., 2nd Floor, San Francisco, CA 94107</p>
+              <a
+                class="d-block text-decoration-none link-dark"
+                href="tel:+415-201-6370"
+                >415-201-6370</a
+              >
+              <a
+                class="d-block text-decoration-none link-dark"
+                href="http://feboot@bootcamp.com"
+                >feboot@bootcamp.com</a
+              >
+            </address>
+          </div>
+          <div class="socials-col col-md-4">
+            <h4>Social Links</h4>
+            <div class="d-flex justify-content-center gap-5 fs-1">
+              <i class="bi bi-twitter"></i>
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-instagram"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

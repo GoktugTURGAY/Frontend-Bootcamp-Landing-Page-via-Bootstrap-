@@ -1,0 +1,15 @@
+blockquote {
+  font-family: Georgia, serif;
+  position: relative;
+}
+
+blockquote:before {
+  display: block;
+  padding-left: 10px;
+  content: "\201C";
+  color: #fff;
+  font-size: 50px;
+  position: absolute;
+  left: -33px;
+  top: -20px;
+}
