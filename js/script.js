@@ -13,6 +13,11 @@ const textLightIcon = document.getElementById("text-light-icon");
 const textLight = document.getElementById("text-light");
 const textLightChecked = document.getElementById("text-light-checked");
 const imgsFeaturedIn = document.querySelectorAll(".c-featured");
+const date = document.querySelector(".date");
+const currentYear = new Date().getFullYear();
+
+// Set year dynamically
+date.textContent = currentYear;
 
 // On scroll-y add shadow to the navigation
 window.addEventListener("scroll", () => {
